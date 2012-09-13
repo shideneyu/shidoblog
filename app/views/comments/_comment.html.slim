@@ -1,0 +1,11 @@
+- if comment
+  i
+    ' Posted on the
+    = comment.created_at
+    '  by
+    strong
+      a href='#{comment.author_email}'
+        = comment.author_name
+  br
+  = h(comment.content)
+  hr
