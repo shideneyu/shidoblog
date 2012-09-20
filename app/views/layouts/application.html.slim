@@ -6,27 +6,24 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
+    = image_tag("logo.jpg", :border => 0, :height => "50%", :width => "100%")
+    div class="navbar navbar-fixed-top"
+      div class="navbar-inner"
+        div class="container"
+          a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
+            span class="icon-bar"
+            span class="icon-bar"
+            span class="icon-bar"
+          a class="brand" href="#"
+            ' Shid'o'Blog
+          div class="nav-collapse"
+            ul class="nav"
+              li
+                = link_to "Articles", articles_path
+              li
+                = link_to "Portfolio"
     div class="container"
       div class="row"
-        div class="span12"
-          div class="logo"
-            = image_tag("logo.jpg", :border => 0, :height => "50%", :width => "100%")
-        div class="span12"
-          div class="navbar navbar-static-top"
-            div class="navbar-inner"
-              div class="container"
-                a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
-                  span class="icon-bar"
-                  span class="icon-bar"
-                  span class="icon-bar"
-                a class="brand" href="#"
-                  ' Shid'o'Blog
-                div class="nav-collapse"
-                  ul class="nav"
-                    li
-                      = link_to "Articles", articles_path
-                    li
-                      = link_to "Portfolio"
         div class="span10"
           = yield
         div class="span2"
